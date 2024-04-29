@@ -4,7 +4,7 @@ export default function Index() {
   return (
     <div>
       Remix boilerplate app
-      <Button>Hej!</Button>
+      <Button>Hej jag bör vara rosa!</Button>
     </div>
   );
 }
