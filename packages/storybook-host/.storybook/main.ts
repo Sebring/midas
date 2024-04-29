@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { mergeConfig } from 'vite';
+import { pigment } from '@pigment-css/vite-plugin';
 
 const config: StorybookConfig = {
   stories: ['../../*/src/lib/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -10,7 +10,6 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y', // 👈 accessibility testing
     '@storybook/addon-docs',
-
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -19,7 +18,7 @@ const config: StorybookConfig = {
 
   viteFinal: async (config) =>
     mergeConfig(config, {
-      plugins: [nxViteTsPaths()],
+      plugins: [nxViteTsPaths(), pigment({ theme: {} })],
     }),
 };
 
