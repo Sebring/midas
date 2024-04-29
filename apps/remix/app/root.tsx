@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { I18nProvider } from 'react-aria-components';
 
 export const meta: MetaFunction = () => [
   {
@@ -18,17 +19,21 @@ export const meta: MetaFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+    <I18nProvider locale={"en"}>
+      <html lang="en">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+
+        <body>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+
+      </html>
+    </I18nProvider>
   );
 }
