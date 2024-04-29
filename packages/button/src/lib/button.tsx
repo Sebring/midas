@@ -1,5 +1,7 @@
+"use client"
+
 import { Button as AriaButton, ButtonProps } from 'react-aria-components';
-import styled from 'styled-components';
+import { styled } from '@pigment-css/react';
 
 const StyledButton = styled(AriaButton)`
   color: white;
@@ -30,7 +32,7 @@ const StyledButton = styled(AriaButton)`
     border-color: gray;
     color: dimgray;
   }
-`;
+`
 
 export const Button = (props: ButtonProps) => {
   return <StyledButton {...props} />;
