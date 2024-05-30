@@ -1,6 +1,9 @@
+@value colors: "../../../theme/src/tokens.css";
+@value blue from colors;
+
 .button {
   color: white;
-  background: deeppink;
+  background-color: blue;
   border: 1px solid lightpink;
   border-radius: 4px;
   appearance: none;

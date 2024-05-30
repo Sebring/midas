@@ -1,5 +1,5 @@
 {
-  "name": "@mvds/button",
+  "name": "@mvds/theme",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -8,11 +8,5 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
-  },
-  "dependencies": {
-    "@mvds/theme": "^0.0.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   }
 }

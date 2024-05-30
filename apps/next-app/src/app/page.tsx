@@ -1,4 +1,4 @@
-import { Button } from "@midas/button"
+import { Button } from "@mvds/button"
 
 export default function Index() {
   /*
